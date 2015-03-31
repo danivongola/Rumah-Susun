@@ -3,7 +3,7 @@
 @section('content')
 <br>
 <br>
-<h1>Daftar Tunggu Calon Penghuni</h1>
+<h1>Calon Penghuni Lulus Seleksi</h1>
 
 <table class="table table-striped table-bordered">
     <thead>
@@ -22,12 +22,8 @@
         <td>{{ $value->detailuser->alamat }}</td>
         <td>{{ $value->detailuser->no_telepon }}</td>
         @if($value->isAdmin())
-     <td><a class=" btn btn-info" href="{{ URL::to('daftartunggu/' . $value->id . '/edit') }}">Edit </a>
-            <a class="pull-right" style="width:60px;">{{ Form::open(array('url' => 'daftartunggu/' . $value->id)) }}
-            {{ Form::hidden('_method', 'DELETE') }}
-            {{ Form::submit('Delete', array('class' =>'pull-left btn btn-danger')) }}
-            {{ Form::close() }}
-        @endif
+        <td><a class=" btn btn-info" href="{{ URL::to('cpls/' . $value->id . '/edit') }}"><i class="fa fa-check"></i> </a>
+            @endif
 
         </td>
 

@@ -52,27 +52,6 @@
     </div>
 </div>
 <div class="form-group">
-    {{ Form::label('tanggal_masuk', 'Tanggal Masuk', array('class'=>'col-sm-2 control-label'))}}
-    <div class="col-sm-4">
-        {{ Form::text('tanggal_masuk', null, array('class'=> 'form-control','placeholder'=>'Masukkan pekerjaan')) }}
-        {{ $errors->first('tanggal_masuk') }}
-    </div>
-</div>
-<div class="form-group">
-    {{ Form::label('tanggal_keluar', 'Tanggal Keluar', array('class'=>'col-sm-2 control-label'))}}
-    <div class="col-sm-4">
-        {{ Form::text('tanggal_keluar', null, array('class'=> 'form-control','placeholder'=>'Masukkan Gaji Bulanan')) }}
-        {{ $errors->first('tanggal_keluar') }}
-    </div>
-</div>
-<div class="form-group">
-    {{ Form::label('status', 'Status', array('class'=>'col-sm-2 control-label'))}}
-    <div class="col-sm-4">
-        {{ Form::text('status', null, array('class'=> 'form-control','placeholder'=>'Masukkan Status')) }}
-        {{ $errors->first('status') }}
-    </div>
-</div>
-<div class="form-group">
     {{ Form::label('jumlah_keluarga', 'Jumlah Keluarga', array('class'=>'col-sm-2 control-label'))}}
     <div class="col-sm-4">
         {{ Form::text('jumlah_keluarga', null, array('class'=> 'form-control','placeholder'=>'Masukkan Jumlah Keluarga')) }}

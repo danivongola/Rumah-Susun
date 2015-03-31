@@ -9,7 +9,7 @@ class PenghuniController extends \BaseController {
     public function index()
     {
         $nama = User::nama();
-        $penghuni = Detailuser::all();
+        $penghuni = Group::where('name', '=', 'penghuni')->first();
         return View::make('penghuni.index')
         ->with ('penghuni', $penghuni)
             ->with ('nama', $nama);

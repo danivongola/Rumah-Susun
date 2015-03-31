@@ -11,9 +11,6 @@ class Group extends Eloquent
     {
         return $this->belongsToMany('User','users_groups', 'group_id', 'user_id');
     }
-    public function groups()
-    {
-        return $this->belongsToMany('Group', 'users_groups', 'user_id', 'group_id');
-    }
+
 
 }

@@ -13,9 +13,6 @@
         <td>Nomor Telepon</td>
         <td>Pekerjaan</td>
         <td>Gaji Bulanan</td>
-        <td>Tanggal Masuk</td>
-        <td>Tanggal Keluar</td>
-        <td>Status</td>
         <td>Jumlah Keluarga</td>
         <td>Action</td>
     </tr>
@@ -29,8 +26,6 @@
         <td>{{ $value->no_telepon }}</td>
         <td>{{ $value->pekerjaan }}</td>
         <td>{{ $value->gaji_bulanan}}</td>
-        <td>{{ $value->tanggal_masuk}}</td>
-        <td>{{ $value->status }}</td>
         <td>{{ $value->jumlah_keluarga}}</td>>
         <td style="width:150px;">{{ Form::open(array('url' => 'calonpenghuni/' . $value->user->id)) }}
             {{ Form::hidden('_method', 'DELETE') }}

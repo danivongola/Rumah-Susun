@@ -21,21 +21,21 @@
     </tr>
     </thead>
     <tbody>
-    @foreach($penghuni as $key => $value)
+    @foreach($penghuni->users as $key => $value)
     <tr>
-        <td>{{ $value->nama }}</td>
-        <td>{{ $value->no_kamar }}</td>
-        <td>{{ $value->lantai }}</td>
-        <td>{{ $value->tanggal_masuk }}</td>
-        <td>{{ $value->tanggal_keluar }}</td>
-        <td>{{ $value->jumlah_keluarga }}</td>
-        <td>{{ $value->status }}</td>
+        <td>{{ $value->detailuser->nama }}</td>
+        <td>{{ $value->kamar->no_kamar }}</td>
+        <td>{{ $value->kamar->lantai }}</td>
+        <td>{{ $value->detailuser->tanggal_masuk }}</td>
+        <td>{{ $value->detailuser->tanggal_keluar }}</td>
+        <td>{{ $value->detailuser->jumlah_keluarga }}</td>
+        <td>{{ $value->detailuser->status }}</td>
         <td style="width:150px;">{{ Form::open(array('url' => 'penghuni/' . $value->id)) }}
             {{ Form::hidden('_method', 'DELETE') }}
             {{ Form::submit('Delete', array('class' =>'pull-left btn btn-danger')) }}
             {{ Form::close() }}
             <a class="pull-right btn btn-info" href="{{ URL::to('penghuni/' . $value->id . '/edit') }}">Edit </a>
-            <a class="pull-right btn btn-info" href="{{ URL::to('penghuni/' . $value->id . '/edit') }}">Perpanjangan </a>
+            <a class="pull-right btn btn-info" href="{{ URL::to('perpanjangan/' . $value->id . '/edit') }}">Perpanjangan </a>
         </td>
     </tr>
     @endforeach

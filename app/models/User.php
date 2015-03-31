@@ -35,13 +35,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
     {
         return $this->hasOne('Kamar', 'id_user', 'id');
     }
-    public function group ()
-    {
-
-        return $this->groups()->first();
-    }
-
-    public static function nama()
+      public static function nama()
     {
         if(!Sentry::check()) return false;
         // get id current user
@@ -49,6 +43,17 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
         // select thumbnail from user eav table
         return User::find($user_id)->detailuser;
 
+    }
+    public function delete()
+    {
+        // delete all related table
+        // one to many relationship
+        $this->detailuser()->delete();
+
+
+
+        // delete the user
+        return parent::delete();
     }
 
     // check current user access is admin

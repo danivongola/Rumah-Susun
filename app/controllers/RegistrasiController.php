@@ -24,9 +24,6 @@ class RegistrasiController extends \BaseController {
             'no_telepon'                   => 'required',
             'pekerjaan'                    => 'required',
             'gaji_bulanan'                 => 'required',
-            'tanggal_masuk'                => 'required',
-            'tanggal_keluar'               => 'required',
-            'status'                       => 'required',
             'jumlah_keluarga'              => 'required'
 
         );
@@ -46,9 +43,6 @@ class RegistrasiController extends \BaseController {
             $register ->no_telepon                  = Input::get('no_telepon');
             $register ->pekerjaan                   = Input::get('pekerjaan');
             $register ->gaji_bulanan                = Input::get('gaji_bulanan');
-            $register ->tanggal_masuk               = Input::get('tanggal_masuk');
-            $register ->tanggal_keluar              = Input::get('tanggal_keluar');
-            $register ->status                      = Input::get('status');
             $register ->jumlah_keluarga             = Input::get('jumlah_keluarga');
             $register ->save();
 
@@ -97,9 +91,6 @@ class RegistrasiController extends \BaseController {
             'no_telepon'                   => 'required',
             'pekerjaan'                    => 'required',
             'gaji_bulanan'                 => 'required',
-            'tanggal_masuk'                => 'required',
-            'tanggal_keluar'               => 'required',
-            'status'                       => 'required',
             'jumlah_keluarga'              => 'required'
         );
         $validator = Validator::make(Input::all(), $rules);
@@ -118,9 +109,6 @@ class RegistrasiController extends \BaseController {
             $register ->no_telepon                  = Input::get('no_telepon');
             $register ->pekerjaan                   = Input::get('pekerjaan');
             $register ->gaji_bulanan                = Input::get('gaji_bulanan');
-            $register ->tanggal_masuk               = Input::get('tanggal_masuk');
-            $register ->tanggal_keluar              = Input::get('tanggal_keluar');
-            $register ->status                      = Input::get('status');
             $register ->jumlah_keluarga             = Input::get('jumlah_keluarga');
             $register ->save();
             // redirect

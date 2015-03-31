@@ -54,7 +54,9 @@ Route::resource('perpanjangan', 'PerpanjanganController');
 Route::resource('kamarkosong', 'KamarkosongController');
 
 
+
 Route::resource('keluhan', 'KeluhanController');
+Route::resource('cpls', 'CplsController');
 
 
 Route::resource('penjadwalan','PenjadwalanController');

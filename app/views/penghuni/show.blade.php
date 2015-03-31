@@ -16,8 +16,14 @@
     <li>No Telepon : {{$penghuni->detailuser->no_telepon}}</li>
     <li>Pekerjaan : {{$penghuni->detailuser->pekerjaan}}</li>
     <li>Gaji Bulanan : {{$penghuni->detailuser->gaji_bulanan}}</li>
+    @if(!empty($penghuni->detailuser->tanggal_masuk))
     <li>Tanggal Masuk : {{$penghuni->detailuser->tanggal_masuk}}</li>
+    @else
+    @endif
+    @if(!empty($penghuni->detailuser->tanggal_keluar))
     <li>Tanggal Keluar : {{$penghuni->detailuser->tanggal_keluar}}</li>
+    @else
+    @endif
     <li>Jumlah Keluarga : {{$penghuni->detailuser->jumlah_keluarga}}</li>
 
 

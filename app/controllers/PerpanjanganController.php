@@ -59,7 +59,7 @@ class PerpanjanganController extends \BaseController {
     {
         $nama = User::nama();
         $user = User::find($id);
-        return View::make('perpanjangan.edit')
+        return View::make('penghuni.perpanjanganpenghuni')
             ->with('user', $user)
             ->with ('nama', $nama);
 
@@ -82,10 +82,12 @@ class PerpanjanganController extends \BaseController {
                 ->withInput(Input::except('password'));
         } else {
             // store
+            $masuk = Input::get('tanggal_masuk');
+            $keluar = Input::get('tanggal_keluar');
             $user=User::where('id', '=', $id)->first();
             $perpanjangan = Detailuser::find($user->detailuser->id);
-            $perpanjangan ->tanggal_masuk        = Input::get('tanggal_masuk');
-            $perpanjangan ->tanggal_keluar       = Input::get('tanggal_keluar');
+            $perpanjangan ->tanggal_masuk        = date('Y-m-d', strtotime($masuk));
+            $perpanjangan ->tanggal_keluar       = date('Y-m-d', strtotime($keluar));
             $perpanjangan ->status               = 'Perpanjangan';
             $perpanjangan ->save();
 

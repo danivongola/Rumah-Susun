@@ -16,8 +16,8 @@ class AuthsController extends \BaseController {
             'first_name' =>'required',
             'last_name' =>'required',
             'email' => 'required|email|unique:users',
-            'password' => 'required|between:5,12|confirmed',
-            'password_confirmation' => 'between:5,12'
+            'password' => 'required|between:5,20|confirmed',
+            'password_confirmation' => 'between:5,20'
         );
 
         $validator = Validator::make(Input::all(), $rules);
